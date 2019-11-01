@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+    - It is the Document Object model which is a language neutral API.
+
 2. What is an event?
+
+    - An event allows the user to interact with a website through various interactions. (ex: click, scroll, key press)
 
 3. What is an event listener?
 
+    - An event Listener is the handler that allows the action to move around to different nodes. 
+
 4. Why would we convert a NodeList into an Array?
 
+    - Node Lists are already array like objects although they don’t allow array methods to be used on them. 
+
 5. What is a component?
+
+    - A component is a function that can be used to build different elements using JS and not amending the CSS or HTML.
 
 ### Git Set up
 
