@@ -20,7 +20,7 @@ axios.get(URL)
     })
 
     setTimeout(() => {
-        console.log(tabArray)
+        // console.log(tabArray)
         tabArray.forEach(item => {
             const newTab = Tabs(item);
             let entry = document.querySelector('.topics')
