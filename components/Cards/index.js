@@ -1,7 +1,7 @@
 // STEP 3: Create Article cards.
 // -----------------------
 // Send an HTTP GET request to the following address: https://lambda-times-backend.herokuapp.com/articles
-// Stduy the response data you get back, closely.
+// Study the response data you get back, closely.
 // You will be creating a component for each 'article' in the list.
 // This won't be as easy as just iterating over an array though.
 // Create a function that will programmatically create the following DOM component:
@@ -20,7 +20,6 @@
 
 let cardURL = 'https://lambda-times-backend.herokuapp.com/articles';
 let articleData = [];
-let subData = [];
 
 axios.get(cardURL)
     .then(res => {
@@ -30,15 +29,39 @@ axios.get(cardURL)
         console.log('DATA NOT RECEIVED:', err)
     })
 
+// setTimeout(() => {
+//     articleData.map(item => {
+//         let array = item  
+//         console.log(array[0])
+//         array[1].forEach(item => {
+//             const newCard = cardCreator(item)
+//             let cardEntry = document.querySelector('.cards-container');
+//             cardEntry.appendChild(newCard)
+//         })
+//     })
+// }, 500)
+
 setTimeout(() => {
     articleData.map(item => {
-        let array = item
-        console.log(array[1])   
+        let array = item  
+        // console.log(array)
+        // console.log(array[0])
         array[1].forEach(item => {
             const newCard = cardCreator(item)
             let cardEntry = document.querySelector('.cards-container');
             cardEntry.appendChild(newCard)
+            newCard.classList.add(`${array[0]}`)
         })
+        // array.forEach(item => {
+        //     let classArray = [item[0]];
+        //     newCard.classList.add(classArray)
+        // })
+        // let classArray = [];
+        // classArray = array[0];
+        // console.log(classArray);
+        // array[0].forEach(item => {
+        //     newCard.classList.add(item)
+        // })
     })
 }, 500)
 
