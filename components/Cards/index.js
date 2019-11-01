@@ -29,39 +29,16 @@ axios.get(cardURL)
         console.log('DATA NOT RECEIVED:', err)
     })
 
-// setTimeout(() => {
-//     articleData.map(item => {
-//         let array = item  
-//         console.log(array[0])
-//         array[1].forEach(item => {
-//             const newCard = cardCreator(item)
-//             let cardEntry = document.querySelector('.cards-container');
-//             cardEntry.appendChild(newCard)
-//         })
-//     })
-// }, 500)
-
 setTimeout(() => {
     articleData.map(item => {
         let array = item  
-        // console.log(array)
-        // console.log(array[0])
+
         array[1].forEach(item => {
             const newCard = cardCreator(item)
             let cardEntry = document.querySelector('.cards-container');
             cardEntry.appendChild(newCard)
             newCard.classList.add(`${array[0]}`)
         })
-        // array.forEach(item => {
-        //     let classArray = [item[0]];
-        //     newCard.classList.add(classArray)
-        // })
-        // let classArray = [];
-        // classArray = array[0];
-        // console.log(classArray);
-        // array[0].forEach(item => {
-        //     newCard.classList.add(item)
-        // })
     })
 }, 500)
 
