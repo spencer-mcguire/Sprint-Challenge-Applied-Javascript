@@ -66,7 +66,7 @@ setTimeout(() => {
 }, 500)
 
 function cardCreator(data) {
-	const container = document.createElement("dev");
+	const container = document.createElement("div");
 	container.classList.add("card");
 
 	const headline = document.createElement("div");
